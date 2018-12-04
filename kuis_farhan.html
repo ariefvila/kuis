@@ -1,0 +1,114 @@
+<html>
+<head>
+    <title>C A L C U L A T O R</title>
+<script language="javascript">
+        function kali()
+        {
+            a = eval(kalkulator.bil1.value)
+            b = eval(kalkulator.bil2.value)
+            c = a * b
+            kalkulator.hasil.value = c
+        }
+        function bagi()
+        {
+            a = eval(kalkulator.bil1.value)
+            b = eval(kalkulator.bil2.value)
+            c = a / b
+            kalkulator.hasil.value = c
+        }
+        function tambah()
+        {
+            a = eval(kalkulator.bil1.value)
+            b = eval(kalkulator.bil2.value)
+            c = a + b
+            kalkulator.hasil.value = c
+        }
+        function kurang()
+        {
+            a = eval(kalkulator.bil1.value)
+            b = eval(kalkulator.bil2.value)
+            c = a - b
+            kalkulator.hasil.value = c
+        }
+        function hapus()
+        {
+            kalkulator.bil1.value = ""
+            kalkulator.bil2.value = ""
+            kalkulator.hasil.value = ""
+        }
+    </script>
+    <style type="text/css">
+        #calculator {
+            background-color: #efefef;
+            padding: 20px;
+            margin: 0px auto;
+            width: 350px;
+            height: auto;
+            border: 2px dashed red;
+        }
+        input.hasil {
+            font-family: verdana;
+            font-size: 24px;
+            color: blue;
+            width: 200px;
+            height: 50px;
+            text-align: center;
+        }
+        input.bil {
+            width: 100px;
+            font-family: verdana;
+            font-size: 14px;
+            color: blue;
+        }
+        input.tombol {
+            font-family: verdana;    
+            font-size: 18px;
+            padding: 13px;
+        }
+		input.tombolhasil {
+			width: 120px;
+            height: auto;
+            font-family: verdana;    
+            font-size: 18px;
+            padding: 13px;
+        }
+</style>
+</head>
+
+<body>
+    <div id="calculator">
+    <center><h2>C A L C U L A T O R</h2></center>
+    <form name="kalkulator">
+        <table align="center">
+            <tr>
+                <td>
+                    <input class="bil" type="text" name="bil1" placeholder="Bilangan 1">
+                </td>
+				<td>
+				 <input class="bil" type="text" name="bil2" placeholder="Bilangan 2">
+				</td>
+                
+            </tr>
+			<tr>
+                   <td>
+                    <input class="tombol" type="button" value="CLEAR" onClick="hapus()">
+					</td>
+					 <td>
+					<input class="hasil" disabled="true" type="text" name="hasil" placeholder="Hasil">
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2"><br><center>
+                    <input class="tombol" type="button" value="x" onClick="kali()">
+                    <input class="tombol" type="button" value="/" onClick="bagi()">
+                    <input class="tombol" type="button" value="+" onClick="tambah()">
+                    <input class="tombol" type="button" value="-" onClick="kurang()">
+					<input class="tombolhasil" type="button" value="=" onClick="hasil()">
+                    </center>
+                </td>
+            </tr>
+        </table>
+    </form>
+    </div>
+</body>
+</html>
